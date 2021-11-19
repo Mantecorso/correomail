@@ -14,11 +14,13 @@
     <form action="enviar1.php"  enctype="multipart/form-data" method="POST" target="resultado">
         <fieldset>
             <legend for="nombre">Nombre</legend>
-            <input type="text" name="nombre" required class="inp">
+            <!-- <input type="text" name="nombre" required class="inp"> -->
+            <input type="text" name="nombre" id="nombre1" maxlength="35" pattern="^[a-zA-Z_]+( [a-zA-Z_]+)*$" required class="inp">
         </fieldset>
         <fieldset>
             <legend for="email">Correo</legend>
-            <input type="mail" name="email" required class="inp">
+            <!-- <input type="text" name="email" required class="inp"> -->
+            <input type="text" name="email" id="email1" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required class="inp">
         </fieldset>
         <fieldset>
             <legend for="telefono">Teléfono</legend>
@@ -52,46 +54,11 @@
         </fieldset>
         <fieldset>
             <input type="reset" value="BORRAR" class="bot">
-            <input type="submit" value="ENVIAR" class="bot">
+            <input type="submit" value="ENVIAR" id="enviarformulario" class="bot">
         </fieldset>
     </form>
     <div class="centradito">
         <iframe style="width:60%; height:100px; border:6px double black;" name="resultado" frameborder="0"></iframe>
     </div>
-
-
-<!--     <form action="enviar-email.php" enctype="multipart/form-data" method="POST" target="resultado">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="mail" name="email">
-        </div>
-        <div>
-            <label for="telefono">Telefono:</label>
-            <input type="tel" name="telefono">
-        </div>
-        <div>
-            <label for="archivo">Archivo:</label>
-            <input type="file" name="archivo" required>
-        </div>
-        <div id="divAsunto">
-            <label for="asunto">Asunto:</label>
-            <input type="text" name="asunto" required>
-        </div>
-        <div id="divText">
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" required></textarea>
-        </div>
-        <div id="bAccion">
-            <input type="submit" value="Enviar">
-        </div>
-    </form>
-    <iframe style="width:100%; height:100px; border:1px solid black;" name="resultado" frameborder="0"></iframe>
- -->
-
-
 </body>
 </html>
